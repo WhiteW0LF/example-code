@@ -1,1 +1,10 @@
 @import './short-info/short-info.component.scss';
+
+app-short-info, app-skills {
+    .mat-spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,1 +1,9 @@
-<p>skills works!</p>
+<mat-card>
+<mat-spinner *ngIf="loading"></mat-spinner>
+
+    <mat-grid-list cols="1" rowHeight="300px">
+        <mat-grid-tile>
+            <canvas #myChart></canvas>
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
