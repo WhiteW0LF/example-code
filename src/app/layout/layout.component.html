@@ -1,2 +1,12 @@
-<p>layout works!</p>
-<router-outlet></router-outlet>
+<mat-drawer-container class="layout-container">
+    <mat-drawer mode="side" opened class="layout-container__nav-menu">
+        <mat-list>
+            <mat-list-item *ngFor="let item of menuItems" [routerLink]="item.link" routerLinkActive="active">
+                {{item.label}}
+            </mat-list-item>
+           </mat-list>
+    </mat-drawer>
+    <mat-drawer-content class="layout-container__main-content">
+        <router-outlet></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>

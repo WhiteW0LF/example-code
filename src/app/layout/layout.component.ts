@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
+type MenuItem = { label: string, link: string };
 
 @Component({
   selector: 'app-layout',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutComponent implements OnInit {
 
-  constructor() { }
+  menuItems: MenuItem[] = [{ label: 'About me', link: '/about-me' }, { label: 'Contact', link: '/contact' }];
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
   }
+
+  // navigate(link: string) {
+  //   this.router.navigate([link]);
+  //   console.log('there');
+  // }
 
 }

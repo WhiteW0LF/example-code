@@ -1,0 +1,27 @@
+app-layout {
+    .layout-container {
+        height: 100%;
+        width: 100%;
+
+        &__nav-menu {
+            width: 300px;
+            border-right: 1px solid rgb(241, 241, 241);
+
+            mat-list-item {
+                cursor: pointer;
+
+                &:hover {
+                   text-decoration: underline;
+                }
+
+                &.active {
+                    background-color: rgb(241, 241, 241);
+                }
+            }
+        }
+
+        &__main-content {
+            padding: 16px 24px;
+        }
+    }
+}

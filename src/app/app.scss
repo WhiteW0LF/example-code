@@ -1,0 +1,9 @@
+@import "./layout/layout.module.scss";
+@import "./pages/pages.module.scss";
+
+.main-content {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 16px 24px;
+}

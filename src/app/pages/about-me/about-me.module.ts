@@ -3,6 +3,9 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutMeComponent } from "./about-me.component";
 import { ShortInfoComponent } from "./short-info/short-info.component";
 import { SkillsComponent } from "./skills/skills.component";
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import {MatTabsModule} from '@angular/material/tabs';
+import { CommonModule } from "@angular/common";
 
 export const PRIMARY_ROUTES: Routes = [{
     path: '',
@@ -21,7 +24,12 @@ export const PRIMARY_ROUTES: Routes = [{
 }]
 
 @NgModule({
-    imports: [],
+    imports: [
+        CommonModule,
+        RouterModule,
+        MatTabsModule,
+        MatProgressSpinnerModule,
+    ],
     declarations: [
         AboutMeComponent,
         ShortInfoComponent,
@@ -37,4 +45,4 @@ export class AboutMeModule { }
         AboutMeModule,
     ],
 })
-export class CustomerPrimaryModule {}
+export class AboutMePrimaryModule {}

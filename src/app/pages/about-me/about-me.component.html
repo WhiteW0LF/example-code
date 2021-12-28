@@ -1,1 +1,8 @@
-<p>about-me works!</p>
+<nav mat-tab-nav-bar>
+    <a mat-tab-link *ngFor="let tab of tabs" [routerLink]="tab.link" (click)="activeLink = tab.link"
+        [active]="activeLink == tab.link">
+        {{tab.label}} </a>
+</nav>
+<div class="main-content">
+    <router-outlet></router-outlet>
+</div>
