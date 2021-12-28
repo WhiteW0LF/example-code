@@ -1,3 +1,31 @@
+<mat-card *ngIf="shortInfoData$ | async as data; else showSpinner">
+    <mat-grid-list cols="24" rowHeight="30px">
+        <mat-grid-tile class="text-bold" [colspan]="2">
+            Name:
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4">
+            {{data.name}}
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="24" rowHeight="30px">
+        <mat-grid-tile class="text-bold" [colspan]="2">
+            Bith:
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4">
+            {{data.bith | date: 'mediumDate'}}
+        </mat-grid-tile>
+    </mat-grid-list>
+
+    <mat-grid-list cols="24" rowHeight="30px">
+        <mat-grid-tile class="text-bold" [colspan]="2">
+            Position:
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="4">
+            {{data.position}}
+        </mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
 <ng-template #showSpinner>
     <mat-spinner></mat-spinner>
 </ng-template>

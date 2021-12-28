@@ -3,9 +3,11 @@ import { RouterModule, Routes } from "@angular/router";
 import { AboutMeComponent } from "./about-me.component";
 import { ShortInfoComponent } from "./short-info/short-info.component";
 import { SkillsComponent } from "./skills/skills.component";
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatTabsModule} from '@angular/material/tabs';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatTabsModule } from '@angular/material/tabs';
 import { CommonModule } from "@angular/common";
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
 
 export const PRIMARY_ROUTES: Routes = [{
     path: '',
@@ -29,6 +31,8 @@ export const PRIMARY_ROUTES: Routes = [{
         RouterModule,
         MatTabsModule,
         MatProgressSpinnerModule,
+        MatGridListModule,
+        MatCardModule,
     ],
     declarations: [
         AboutMeComponent,
@@ -45,4 +49,4 @@ export class AboutMeModule { }
         AboutMeModule,
     ],
 })
-export class AboutMePrimaryModule {}
+export class AboutMePrimaryModule { }

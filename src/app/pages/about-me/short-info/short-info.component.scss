@@ -5,4 +5,14 @@ app-short-info {
         left: 50%;
         transform: translate(-50%, -50%);
     }
+
+    .mat-divider {
+        margin: 12px 0;
+    }
+
+    .mat-grid-list {
+        .mat-grid-tile-content:first-of-type {
+            justify-content: left;
+        }
+    }
 }
